@@ -4,21 +4,22 @@
 @import url("./__social/navbar__social.css");
 
 .navbar {
-  background-color: #393939;
-  color: #fff;
-  position: fixed;
-  top: 30px;
-  border-radius: 6px;
+  background: #393939;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.04);
-  box-sizing: border-box;
+  border-radius: 6px;
+  position: fixed;
   z-index: 1;
   display: flex;
-  min-width: 1060px;
-  margin: 0 100px 0;
-  padding: 14px 20px;
-  height: 48px;
+  margin: 20px 100px 0 100px;
+  padding: 17px 20px;
   align-items: center;
   justify-content: space-between;
+  width: calc(100% - 260px);
+  max-width: 1020px;
+}
+
+.navbar_theme_light {
+  background: #EFEFEF;
 }
 
 @media screen and (max-width: 768px) {

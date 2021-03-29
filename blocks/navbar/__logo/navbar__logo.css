@@ -8,10 +8,15 @@
   line-height: 14px;
   letter-spacing: -0.04em;
   transition: opacity 0.5s linear;
+  padding: 0;
 }
 
 .navbar__logo:hover {
   opacity: 0.7;
+}
+
+.navbar__logo_theme_light {
+  color: #000000;
 }
 
 @media screen and (max-width: 320px) {

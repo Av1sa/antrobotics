@@ -1,12 +1,11 @@
 .popup__form-input {
-  max-width: 324px;
   box-sizing: border-box;
   border: 1px solid #c4c4c4;
   border-radius: 4px;
-  padding: 13px 14px 12px 14px;
-  margin-bottom: 20px;
+  padding: 12px 14px;
+  margin: 0 0 20px 0;
   outline: none;
-  font-weight: 400;
+  font-weight: normal;
   font-size: 16px;
   line-height: 19px;
 }

@@ -1,7 +1,5 @@
 .popup__form-close {
-  background-image: url(../../../../images/close-icon.svg);
-  background-repeat: no-repeat;
-  background-color: rgba(0, 0, 0, 0);
+  background: url(../../../../images/close-icon.svg) no-repeat center;
   width: 16px;
   height: 16px;
   margin: 0;
@@ -11,7 +9,6 @@
   right: 21px;
   border: none;
   outline: none;
-  transition: opacity 0.5s linear;
 }
 
 .popup__form-close:hover {

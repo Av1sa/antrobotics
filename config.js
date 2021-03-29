@@ -119,6 +119,7 @@ let data = {
         running_time: "4 hrs or 9 mi",
         charging_time: "1.2 hrs (0-80%: 0.75 hrs)",
       },
+      link: "https://www.google.com/search?q=otto+100",
     },
     {
       image: "./assets/products/mir100.jpg",
@@ -130,6 +131,7 @@ let data = {
         running_time: "10 hrs or 12 mi",
         charging_time: "3 hrs (0-80%: 2 hrs)",
       },
+      link: "https://www.google.com/search?q=mir+100",
     },
     {
       image: "./assets/products/ant100.jpg",
@@ -141,6 +143,7 @@ let data = {
         running_time: "4 hrs or 9 mi",
         charging_time: "0.3 hrs (0-80%: 10 min)",
       },
+      link: "https://www.google.com/search?q=ant+100",
     },
   ],
 };

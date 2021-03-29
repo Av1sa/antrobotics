@@ -1,16 +1,24 @@
 .products__gallery-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background: #ffffff;
   box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.04);
   border-radius: 6px;
-  padding: 62px 22px;
-  max-width: 575px;
-  flex-shrink: 0;
+  padding: 62px 6px;
+  min-width: 575px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1140px) {
   .products__gallery-container {
     margin-bottom: 80px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .products__gallery-container {
+    
+    min-width: 280px;
+    margin-bottom: 50px;
   }
 }

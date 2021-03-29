@@ -1,43 +1,42 @@
 import Carousel from "../components/Carousel.js";
 
+
+// const navbar = document.querySelector(".navbar");
+// const navbarLogo = document.querySelector(".navbar__logo");
+// const navbarSocial = document.querySelector(".navbar__social");
+// const navbarLinks = document.querySelectorAll(".navbar__list-link");
+// const bannerHeight = document.querySelector(".banner").scrollHeight;
+// const menuBtn = document.querySelector(".menu-btn");
+
+// let menuOpen = false;
 // Hamburger Menu
-const navBar = document.querySelector(".navbar");
-const navLogo = document.querySelector(".navbar__logo");
-const navSocial = document.querySelector(".navbar__social");
-const navList = document.querySelector(".navbar__list");
-const navLinks = document.querySelectorAll(".navbar__list-link");
-const menuBtn = document.querySelector(".menu-btn");
+// menuBtn.addEventListener("click", () => {
+//   if (!menuOpen) {
+//     menuBtn.classList.add("open");
+//     menuOpen = true;
+//     navList.style.display = "flex";
+//   } else {
+//     menuBtn.classList.remove("open");
+//     menuOpen = false;
+//     navList.style.display = "none";
+//   }
+// });
 
-let menuOpen = false;
 
-menuBtn.addEventListener("click", () => {
-  if (!menuOpen) {
-    menuBtn.classList.add("open");
-    menuOpen = true;
-    navList.style.display = "flex";
-  } else {
-    menuBtn.classList.remove("open");
-    menuOpen = false;
-    navList.style.display = "none";
-  }
-});
-
-// Scroll style change
-window.addEventListener("scroll", () => {
-  if (window.scrollY > "400") {
-    (navBar.style.background = "#efefef"), (navBar.style.color = "#000");
-    navLogo.style.color = "#000";
-    navSocial.style.color = "#000";
-    navList.style.background = "#efefef";
-    navLinks.forEach((link) => (link.style.color = "#000"));
-  } else {
-    (navBar.style.background = "#393939"), (navBar.style.color = "#fff");
-    navLogo.style.color = "#fff";
-    navSocial.style.color = "#fff";
-    navList.style.background = "#393939";
-    navLinks.forEach((link) => (link.style.color = "#fff"));
-  }
-});
+// Scroll navbar style change
+// window.addEventListener("scroll", () => {
+//   if (window.scrollY > bannerHeight - 50) {
+//     navbar.classList.add("navbar_theme_light");
+//     navbarLogo.classList.add("navbar__logo_theme_light");
+//     navbarSocial.classList.add("navbar__social_theme_light");
+//     navbarLinks.forEach(item => item.classList.add("navbar__list-link_theme_light"));
+//   } else {
+//     navbar.classList.remove("navbar_theme_light");
+//     navbarLogo.classList.remove("navbar__logo_theme_light");
+//     navbarSocial.classList.remove("navbar__social_theme_light");
+//     navbarLinks.forEach(item => item.classList.remove("navbar__list-link_theme_light"));
+//   }
+// });
 
 // Add Benefits
 function addBenefits() {
@@ -118,6 +117,7 @@ function populateProductsItem(item) {
   document.querySelector(
     "#charging-time"
   ).textContent = `Charging time: ${item.features.charging_time}`;
+  document.querySelector(".products__link").href = item.link;
 }
 
 // Gallery Carousel
@@ -138,12 +138,10 @@ const productsCarousel = new Carousel({
 
 // Popup
 const popup = document.querySelector(".popup");
-const inputs = document.querySelectorAll(".popup__form-input");
-// const formButton = document.querySelector(".work__button");
+// const contactButton = document.querySelector(".work__button");
 
 function openPopup() {
-  popup.classList.add("popup-open");
-  inputs.forEach((input) => (input.value = ""));
+  popup.classList.add("popup_state_open");
 }
 
 function closePopup(e) {
@@ -151,23 +149,23 @@ function closePopup(e) {
     e.target.classList.contains("popup__form-close") ||
     e.target.classList.contains("popup")
   ) {
-    popup.classList.remove("popup-open");
+    popup.classList.remove("popup_state_open");
   }
 }
 
-function escClosePopup(e) {
+function closePopupEsc(e) {
   if (e.key === "Escape") {
-    popup.classList.remove("popup-open");
+    popup.classList.remove("popup_state_open");
   }
 }
 
-//formButton.addEventListener("click", openPopup);
-document.addEventListener("click", closePopup);
-document.addEventListener("keyup", escClosePopup);
+// contactButton.addEventListener("click", openPopup);
+// document.addEventListener("click", closePopup);
+// document.addEventListener("keyup", closePopupEsc);
 
-// Functions Call
-galleryCarousel.generateCarousel();
+
+// galleryCarousel.generateCarousel();
 productsCarousel.generateCarousel();
-addBenefits();
-addTeam();
-addCustomers();
+// addBenefits();
+// addTeam();
+// addCustomers();
